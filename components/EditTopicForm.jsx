@@ -19,7 +19,7 @@ export default function EditTopicForm ({id,title,description}){
                 headers:{
                     "Content-type": "application/json",
                 },
-                body: Json.stringify ({newTitle,newDescription}),
+                body: JSON.stringify ({newTitle,newDescription}),
             });
 
             if(!res.ok){
@@ -53,7 +53,6 @@ export default function EditTopicForm ({id,title,description}){
     <button className="bg-green-600 font-bold text-white py-6 px-6 w-fit">
         Update Topic
     </button>
-
 </form>
     );
 }
